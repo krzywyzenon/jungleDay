@@ -48,8 +48,15 @@ public class Jungle {
 			}
 		}else
 		{
-			System.out.println("All the monkeys are dead!!!");
-			System.exit(0);
+			System.out.println("All the monkeys are dead!!! System closing!!!");
+			msg ="All the monkeys are dead!!! System closing!!!";
+//			try {
+//				Thread.sleep(1000);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			System.exit(0);
 		}
 			
 		

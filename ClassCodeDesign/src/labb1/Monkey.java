@@ -34,7 +34,7 @@ public class Monkey {
 					
 			}
 			System.out.println(name + " is not that hungry anymore");
-			tekst1 = name + " is not that hungry anymore";
+			tekst1 = tekst1 + "\n" + name + " is not that hungry anymore";
 		}
 			
 	}
@@ -46,8 +46,8 @@ public class Monkey {
 			if(td.getNumberOfBanas()>0){
 				hunger -= td.bananas[td.getBananaCounter()].getNourishment();
 				td.removeBanana(td.getBananaCounter());
-				tekst1 = name + " has eaten a banana";
 				System.out.println(name + " has eaten a banana");
+				tekst1 = tekst1 + "\n"+ name + " has eaten a banana";
 				eating = true;
 			}else
 			{
