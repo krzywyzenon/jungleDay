@@ -6,11 +6,11 @@ public class MainClass {
 		//LEAVE LEAVE NOW LEAVE BEFORE ADMIN BANS YOU
 		Jungle j = new Jungle();
 		
-		while(true){
-			j.update();
-		}
+//		while(true){
+//			j.update();
+//		}
 		
-
+		Panel myPanel = new Panel();
 		
 	}
 

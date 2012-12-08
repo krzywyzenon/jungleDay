@@ -8,6 +8,7 @@ public class Jungle {
 	private Random rnd = new Random();
 	private Tree trees[] = new Tree[5];
 	private ArrayList<Monkey> monkeyys;
+	String msg;
 	
 	Jungle(){
 		String monkeyNames[] = new String[]{"Gorilla", "Chimp", "Babian", "Tarzan", "Chita"}; 
@@ -27,6 +28,7 @@ public class Jungle {
 	int randomActionChoice;
 	int randomMonkeyChoice = 0;
 	public void update(){
+		
 		randomActionChoice = rnd.nextInt(2);
 		if(monkeyys.size()>0){
 			randomMonkeyChoice = rnd.nextInt(monkeyys.size());
@@ -34,13 +36,14 @@ public class Jungle {
 		if(monkeyys.size()>0){
 			if(randomActionChoice == 0){
 				int randomTreeChoice = rnd.nextInt(4);
-//			monkeys[randomMonkeyChoice].hungerIncrease(trees[randomTreeChoice]);
 				monkeyys.get(randomMonkeyChoice).hungerIncrease(trees[randomTreeChoice]);
+				msg = monkeyys.get(randomMonkeyChoice).getText();
 				if(monkeyys.get(randomMonkeyChoice).alive ==false)
 					monkeyys.remove(monkeyys.indexOf(monkeyys.get(randomMonkeyChoice)));
 			}else
 			{
 				monkeyys.get(randomMonkeyChoice).walk();
+				msg = monkeyys.get(randomMonkeyChoice).getText();
 				
 			}
 		}else
@@ -56,5 +59,9 @@ public class Jungle {
 		int randomMonkeyChoice = rnd.nextInt(monkeyys.size());
 //		System.out.println(randomMonkeyChoice);
 		System.out.println(monkeyys.size());
+	}
+	
+	public String getText(){
+		return msg;
 	}
 }
